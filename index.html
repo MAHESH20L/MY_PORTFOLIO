@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>My Portfolio</title>
-  <meta name="viewport" content="width=1024"> 
+  <meta name="viewport" content="width=1024">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="header-content">
       <h1>PATTIMANI MAHESH</h1>
@@ -19,11 +22,20 @@
     </nav>
   </header>
 
+  <!-- ABOUT -->
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I am a final year B.Tech Computer Science student with a keen interest in software development and technology. I am eager to learn by working on real-world projects and expanding my technical skills. My passion is exploring new technologies and solving challenging problems. I am always open to new opportunities and collaborations to grow as a developer.</p>
+    <p>
+      I am a final year B.Tech Computer Science student with a keen interest in
+      software development and technology. I enjoy solving problems and learning
+      new technologies.
+    </p>
+
+    <!-- IMAGE (HTML BASIC REQUIREMENT) -->
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" data-aos="fade-right">
     <h2>Skills</h2>
     <ul>
@@ -33,42 +45,127 @@
     </ul>
   </section>
 
+  <!-- EDUCATION TABLE (HTML BASIC REQUIREMENT) -->
+  <section id="education" data-aos="fade-left">
+    <h2>Education</h2>
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Degree</th>
+        <th>Branch</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>B.Tech</td>
+        <td>Computer Science</td>
+        <td>Final Year</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- PROJECTS -->
   <section id="projects" data-aos="zoom-in">
     <h2>Projects</h2>
     <ul>
       <li>
-        <a href="https://github.com/MAHESH20L/Ebook_management" target="_blank">Ebook Management System</a> : Developed a web-based platform using HTML, CSS, PHP, and MySQL.
+        <a href="https://github.com/MAHESH20L/Ebook_management" target="_blank">
+          Ebook Management System
+        </a>
+        – HTML, CSS, PHP, MySQL
       </li>
       <li>
-        <a href="https://github.com/MAHESH20L/BLACK_JACK/blob/main/blackjack.txt" target="_blank">Blackjack Game</a> : A digital Blackjack game using Python.
+        <a href="https://github.com/MAHESH20L/BLACK_JACK/blob/main/blackjack.txt" target="_blank">
+          Blackjack Game
+        </a>
+        – Python
       </li>
-    </ul>
-  </section>
-  <section id="Certifications" data-aos="fade-left">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Completed Web Development from <a href="https://trainings.internshala.com/view_certificate/4pgg7mjgih2/glw8txkx0ln/" target="_blank" rel="noopener noreferrer">Internshala</a></li>
-      <li>Completed Data Security & Privacy from <a href="https://www.coursera.org/account/accomplishments/certificate/2N3QQNRJNVVH" target="_blank" rel="noopener noreferrer">Coursera</a></li>
     </ul>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" data-aos="fade-left">
+    <h2>Certifications</h2>
+    <ul>
+      <li>
+        Web Development –
+        <a href="https://trainings.internshala.com/view_certificate/4pgg7mjgih2/glw8txkx0ln/" target="_blank">
+          Internshala
+        </a>
+      </li>
+      <li>
+        Data Security & Privacy –
+        <a href="https://www.coursera.org/account/accomplishments/certificate/2N3QQNRJNVVH" target="_blank">
+          Coursera
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- DOM BUTTON CLICK (INTERMEDIATE) -->
+  <section data-aos="flip-up">
+    <h2>DOM Button Example</h2>
+    <p id="domText">Hello World</p>
+    <button id="changeBtn">Click to Change Text</button>
+  </section>
+
+  <!-- JAVASCRIPT LOGIC (INTERMEDIATE) -->
+  <section data-aos="fade-up">
+    <h2>JavaScript Logic</h2>
+
+    <!-- EVEN / ODD -->
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkEvenOdd()">Check Even / Odd</button>
+    <p id="evenOddResult"></p>
+
+    <!-- REVERSE STRING -->
+    <input type="text" id="stringInput" placeholder="Enter text">
+    <button onclick="reverseString()">Reverse String</button>
+    <p id="reverseResult"></p>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" data-aos="flip-up">
     <h2>Contact</h2>
     <p>Email: pXXXXX7@gmail.com</p>
   </section>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pattimanimahesh87@gmail.com" 
-     class="floating-icon" 
-     target="_blank" 
+
+  <!-- FLOATING ICON -->
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pattimanimahesh87@gmail.com"
+     class="floating-icon"
+     target="_blank"
      title="Send me an email">
     💬
   </a>
+
+  <!-- JS (INLINE AS REQUESTED) -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <script>
+    /* AOS INIT */
     AOS.init({
       duration: 1000,
       once: false,
       mirror: true
     });
+
+    /* DOM BUTTON CLICK */
+    document.getElementById("changeBtn").addEventListener("click", function () {
+      document.getElementById("domText").innerText = "Text Changed Successfully!";
+    });
+
+    /* EVEN OR ODD */
+    function checkEvenOdd() {
+      let num = document.getElementById("numberInput").value;
+      let result = (num % 2 === 0) ? "Even Number" : "Odd Number";
+      document.getElementById("evenOddResult").innerText = result;
+    }
+
+    /* REVERSE STRING */
+    function reverseString() {
+      let str = document.getElementById("stringInput").value;
+      let reversed = str.split("").reverse().join("");
+      document.getElementById("reverseResult").innerText = reversed;
+    }
   </script>
+
 </body>
 </html>
