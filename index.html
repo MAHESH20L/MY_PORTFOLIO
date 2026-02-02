@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <meta name="viewport" content="width=1024">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -23,7 +22,7 @@
   </header>
 
   <!-- ABOUT -->
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I am a final year B.Tech Computer Science student with a keen interest in
@@ -31,12 +30,11 @@
       new technologies.
     </p>
 
-    <!-- IMAGE (HTML BASIC REQUIREMENT) -->
     <img src="https://via.placeholder.com/150" alt="Profile Photo">
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" data-aos="fade-right">
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Programming Languages: Python, C, C++, Java</li>
@@ -45,8 +43,8 @@
     </ul>
   </section>
 
-  <!-- EDUCATION TABLE (HTML BASIC REQUIREMENT) -->
-  <section id="education" data-aos="fade-left">
+  <!-- EDUCATION -->
+  <section id="education">
     <h2>Education</h2>
     <table border="1" cellpadding="10">
       <tr>
@@ -63,7 +61,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" data-aos="zoom-in">
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li>
@@ -82,7 +80,7 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" data-aos="fade-left">
+  <section id="certifications">
     <h2>Certifications</h2>
     <ul>
       <li>
@@ -100,72 +98,19 @@
     </ul>
   </section>
 
-  <!-- DOM BUTTON CLICK (INTERMEDIATE) -->
-  <section data-aos="flip-up">
-    <h2>DOM Button Example</h2>
-    <p id="domText">Hello World</p>
-    <button id="changeBtn">Click to Change Text</button>
-  </section>
-
-  <!-- JAVASCRIPT LOGIC (INTERMEDIATE) -->
-  <section data-aos="fade-up">
-    <h2>JavaScript Logic</h2>
-
-    <!-- EVEN / ODD -->
-    <input type="number" id="numberInput" placeholder="Enter a number">
-    <button onclick="checkEvenOdd()">Check Even / Odd</button>
-    <p id="evenOddResult"></p>
-
-    <!-- REVERSE STRING -->
-    <input type="text" id="stringInput" placeholder="Enter text">
-    <button onclick="reverseString()">Reverse String</button>
-    <p id="reverseResult"></p>
-  </section>
-
   <!-- CONTACT -->
-  <section id="contact" data-aos="flip-up">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: pXXXXX7@gmail.com</p>
+    <p>Email: pattimanimahesh87@gmail.com</p>
   </section>
 
-  <!-- FLOATING ICON -->
+  <!-- FLOATING EMAIL ICON -->
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pattimanimahesh87@gmail.com"
      class="floating-icon"
      target="_blank"
      title="Send me an email">
     💬
   </a>
-
-  <!-- JS (INLINE AS REQUESTED) -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <script>
-    /* AOS INIT */
-    AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: true
-    });
-
-    /* DOM BUTTON CLICK */
-    document.getElementById("changeBtn").addEventListener("click", function () {
-      document.getElementById("domText").innerText = "Text Changed Successfully!";
-    });
-
-    /* EVEN OR ODD */
-    function checkEvenOdd() {
-      let num = document.getElementById("numberInput").value;
-      let result = (num % 2 === 0) ? "Even Number" : "Odd Number";
-      document.getElementById("evenOddResult").innerText = result;
-    }
-
-    /* REVERSE STRING */
-    function reverseString() {
-      let str = document.getElementById("stringInput").value;
-      let reversed = str.split("").reverse().join("");
-      document.getElementById("reverseResult").innerText = reversed;
-    }
-  </script>
 
 </body>
 </html>
