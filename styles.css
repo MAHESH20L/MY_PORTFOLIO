@@ -48,13 +48,21 @@ nav a:hover {
 
 /* ================= HERO ================= */
 .hero {
-  padding: 80px 60px 40px;
+  min-height: 100vh;              /* FULL SCREEN */
+  display: flex;
+  align-items: center;
+  padding: 80px 80px;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
+  width: 100%;
+}
+
+.hero-image {
+  flex: 0 0 280px;
 }
 
 .profile-pic {
@@ -66,14 +74,20 @@ nav a:hover {
   box-shadow: 0 0 40px rgba(96, 165, 250, 0.6);
 }
 
+.hero-text {
+  flex: 1;
+}
+
 .hero-text h1 {
   font-size: 52px;
   margin-bottom: 20px;
 }
 
 .hero-text p {
-  max-width: 700px;
-  line-height: 1.6;
+  max-width: none;               /* allow full width */
+  text-align: justify;           /* JUSTIFIED TEXT */
+  text-justify: inter-word;
+  line-height: 1.8;
   margin-bottom: 30px;
   color: #e0e7ff;
 }
@@ -101,7 +115,6 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 60px;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -175,11 +188,17 @@ footer a {
 
   .hero {
     padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hero-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .hero-text p {
+    text-align: left; /* better readability on mobile */
   }
 
   .profile-pic {
